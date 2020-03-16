@@ -1,0 +1,11 @@
+N=int(input('number of traverse='))
+x=[]
+y=[]
+for r in range(N+1):
+    x.append([float(input('enter x='))])
+    y.append([float(input('enter y='))])
+area = x[0]*(y[1]-y[N])+x[N]*(y[0]-y[N-1])
+i = 1
+for k in range (i,N):
+    area=area+x[i]*(y[i+1]-y[i-1])
+area = .5*abs(area)
